@@ -1,0 +1,60 @@
+_ feedback push
+_ feedback disable,all,everything
+
+#3 button mouse
+config_mouse three_button
+
+#Aliases
+alias clear, mstop; mclear; hide all
+alias nogui, set internal_gui=0
+alias gui, set internal_gui=1
+alias shiny, set spec_power=250; set spec_refl=1.5; set antialias=2; ray
+alias exit, quit
+alias white, bg_color white; set depth_cue=0; set ray_trace_fog=0
+
+#default fetch location, so as not to fill the home directory
+#set fetch_path, ~/pdbs
+
+set use_shaders, 1 # global shader setting
+set cartoons_use_shader, 1 # per representation setting
+set sticks_use_shader, 1 # per representation setting
+set surface_use_shader, 1 # per representation setting
+set ribbon_use_shader, 1 # per representation setting
+for spheres, set sphere_mode, 9 (ARB) or set sphere_mode, 5 (GLSL)
+
+set bg_rgb, white
+space cmyk
+util.performance(0)
+set cartoon_side_chain_helper, on
+set cartoon_fancy_helices, on
+set cartoon_discrete_colors, on
+set cartoon_highlight_color, grey50
+
+dss
+
+set antialias, 2
+set ray_trace_mode, 1
+set ray_trace_color, 0x000000
+set ray_trace_fog, 0
+set ray_opaque_background, 0
+
+#Extending colors with color-blindness friendly color palette
+#References:
+#http://jfly.iam.u-tokyo.ac.jp/html/color_cb/#pallet
+#https://personal.sron.nl/~pault/colourschemes.pdf
+set_color cb_blue, [51, 34, 136]
+set_color cb_tan, [221, 204, 119]
+set_color cb_lightblue, [136, 204, 238]
+set_color cb_green, [17, 119, 51]
+set_color cb_teal, [68, 170, 153]
+set_color cb_gold, [153, 153, 51]
+set_color cb_salmon, [204, 102, 119]
+set_color cb_red, [136, 34, 85]
+set_color cb_pink, [170, 68, 153]
+
+rebuild
+
+from pymol import cmd
+import sys
+
+_ feedback pop
