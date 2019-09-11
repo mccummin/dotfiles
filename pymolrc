@@ -22,7 +22,7 @@ set surface_use_shader, 1 # per representation setting
 set ribbon_use_shader, 1 # per representation setting
 for spheres, set sphere_mode, 9 (ARB) or set sphere_mode, 5 (GLSL)
 
-set bg_rgb, white
+set bg_rgb, black
 space cmyk
 util.performance(0)
 set cartoon_side_chain_helper, on
@@ -31,6 +31,7 @@ set cartoon_discrete_colors, on
 set cartoon_highlight_color, grey50
 
 dss
+set seq_view, 1
 
 set antialias, 2
 set ray_trace_mode, 1
