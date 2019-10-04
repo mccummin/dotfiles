@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/matt/.oh-my-zsh"
 export gqbinders="/home/matt/Documents/research/unc/gq_binders"
+export rosettabin="/home/matt/Rosetta/main/source/bin"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -116,3 +117,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs histor
 alias dogwood="ssh mccummin@dogwood.unc.edu"
 
 LS_COLORS=$LS_COLORS:'tw=30:ow=34:' ; export LS_COLORS
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi

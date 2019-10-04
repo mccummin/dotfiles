@@ -35,6 +35,8 @@ nnoremap k gk
 let mapleader=","
 nnoremap <leader>u :GundoToggle<CR>
 
+set clipboard=unnamedplus
+
 function! <SID>StripTrailingWhitespaces()
     " save last search & cursor position
     let _s=@/
