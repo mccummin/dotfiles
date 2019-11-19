@@ -10,10 +10,16 @@ syntax enable
 set tabstop=4
 set softtabstop=4
 set expandtab
+set shiftround
+set autoindent
+let s:tabwidth=4
+au Filetype * let &l:tabstop = s:tabwidth
+au Filetype * let &l:shiftwidth = s:tabwidth
+au Filetype * let &l:softtabstop = s:tabwidth
 
 set number
 set showcmd
-filetype indent on
+filetype plugin indent on
 set wildmenu
 set lazyredraw
 set showmatch
