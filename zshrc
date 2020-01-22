@@ -117,6 +117,3 @@ LS_COLORS=$LS_COLORS:'tw=30:ow=34:' ; export LS_COLORS
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
-
-. /usr/share/undistract-me/long-running.bash
-notify_when_long_running_commands_finish_install
