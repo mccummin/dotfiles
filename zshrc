@@ -111,6 +111,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
 alias dogwood="ssh mccummin@dogwood.unc.edu"
+alias wiggins="ssh mccummin@wiggins.med.unc.edu"
 
 LS_COLORS=$LS_COLORS:'tw=30:ow=34:' ; export LS_COLORS
 
